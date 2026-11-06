@@ -227,11 +227,6 @@ Potential extensions include:
 - Dashboard integration and interactive visualizations
 
 
-# Citation
-
-> Ahmed, A. K.(2026). Population-Weighted Lorenz Curve Analysis of Universal Health Coverage Service Coverage Index (UHC-SCI). GitHub Repository.
-
-
 # License
 
 MIT License
