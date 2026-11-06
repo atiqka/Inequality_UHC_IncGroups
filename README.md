@@ -1,4 +1,4 @@
-# Population-Weighted Lorenz Curve Analysis of Universal Health Coverage (UHC-SCI)
+## Population-Weighted Lorenz Curve Analysis of Universal Health Coverage (UHC-SCI)
 
 Author:** Atiq Kainan Ahmed  
 Email:** atiqka@yahoo.com
@@ -11,7 +11,9 @@ This repository provides a Python-based workflow for assessing inequality in the
 
 By incorporating population weights, the methodology reflects the experience of people rather than simply comparing countries as equal units. This approach provides a more meaningful assessment of equity in health coverage and can support evidence-based policy discussions on universal health coverage and health system performance.
 
----
+Output plot is placed here. https://github.com/atiqka/Inequality_UHC_IncGroups/blob/main/lorenz%20curve_uhc_by%20income%20groups.png
+
+
 
 ## Why This Analysis Matters
 
@@ -54,24 +56,17 @@ The input dataset should contain the following variables:
 | `inc_grp` | World Bank income group classification |
 | `pop` | Population used as analytical weights |
 
-Example structure:
 
-```text
-countryname,uhc_sci,inc_grp,pop
-Bangladesh,67,Lower middle income,171186372
-Thailand,81,Upper middle income,71801279
-Germany,86,High income,84369500
-```
 
 The script automatically removes observations with missing values before conducting the analysis.
 
----
+
 
 ## Methodology
 
 The analytical workflow follows standard inequality measurement approaches commonly used in economics and development studies.
 
-### Step 1: Data Preparation
+## Step 1: Data Preparation
 
 The script imports the dataset and retains the following variables:
 
@@ -82,7 +77,7 @@ The script imports the dataset and retains the following variables:
 
 Observations with missing data are removed.
 
-### Step 2: Income Group Classification
+## Step 2: Income Group Classification
 
 Countries are divided into four World Bank income categories:
 
@@ -91,7 +86,7 @@ Countries are divided into four World Bank income categories:
 3. Lower middle income
 4. Low income
 
-### Step 3: Population-Weighted Lorenz Curves
+## Step 3: Population-Weighted Lorenz Curves
 
 For each income group, the script computes a Lorenz curve using the `ineqpy` package.
 
@@ -111,7 +106,7 @@ Interpretation:
 
 Higher values indicate larger disparities in UHC service coverage.
 
-### Step 5: Visualization
+## Step 5: Visualization
 
 Results are displayed in a 2×2 faceted figure showing:
 
@@ -120,7 +115,7 @@ Results are displayed in a 2×2 faceted figure showing:
 - Shaded inequality areas
 - Population-weighted Gini coefficients
 
----
+
 
 ## Output
 
@@ -130,7 +125,7 @@ The analysis generates a high-resolution PNG figure:
 lorenz_facets_uhc_ordered.png
 ```
 
-The output contains four panels corresponding to:
+The output contains four panels corresponding to the World Bank income group countries:
 
 - High income countries
 - Upper middle income countries
@@ -139,7 +134,7 @@ The output contains four panels corresponding to:
 
 Each figure presents both graphical and numerical measures of inequality.
 
----
+
 
 ## Interpreting the Results
 
@@ -162,7 +157,7 @@ The Gini coefficient provides a concise summary measure:
 
 These thresholds should be interpreted contextually depending on the indicator and dataset.
 
----
+
 
 ## Software Requirements
 
@@ -172,13 +167,8 @@ The script is written in Python and uses the following libraries:
 - matplotlib
 - ineqpy
 
-Install dependencies using:
 
-```bash
-pip install pandas matplotlib ineqpy
-```
 
----
 
 ## Running the Script
 
@@ -196,7 +186,7 @@ python uhc_lorenz.py
 
 After successful execution, the figure will be saved to the specified output directory.
 
----
+
 
 ## Potential Applications
 
@@ -204,28 +194,28 @@ While developed for Universal Health Coverage Service Coverage Index (UHC-SCI), 
 
 Examples include:
 
-### Health
+## Health
 
 - Health expenditure
 - Vaccination coverage
 - Child mortality indicators
 - Maternal health indicators
 
-### Climate and Environment
+## Climate and Environment
 
 - Climate finance allocation
 - Adaptation investments
 - Nature-based solutions financing
 - Disaster risk exposure
 
-### Social Development
+## Social Development
 
 - Social protection coverage
 - Educational attainment
 - Access to public services
 - Poverty reduction investments
 
----
+
 
 ## Why Population Weighting Matters
 
@@ -235,7 +225,6 @@ For example, a country with 2 million people and a country with 200 million peop
 
 By incorporating population weights, this framework provides a more realistic representation of how services are distributed across populations rather than across countries.
 
----
 
 ## Future Enhancements
 
@@ -249,22 +238,14 @@ Potential extensions include:
 - Concentration curves using vulnerability metrics
 - Dashboard integration and interactive visualizations
 
----
 
 ## Citation
 
-If you use this repository in research, reports, policy analysis, or academic publications, please cite:
-
 > Ahmed, A. K.(2026). Population-Weighted Lorenz Curve Analysis of Universal Health Coverage Service Coverage Index (UHC-SCI). GitHub Repository.
 
----
 
-
-
----
 
 ## License
 
 This project is released under the MIT License.
 
-You are free to use, modify, and distribute the code with appropriate attribution.
