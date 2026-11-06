@@ -5,7 +5,7 @@ Email:** atiqka@yahoo.com
 
 ---
 
-## Overview
+# Overview
 
 This repository provides a Python-based workflow for assessing inequality in the **Universal Health Coverage Service Coverage Index (UHC-SCI)** using **population-weighted Lorenz curves** and **Gini coefficients**. The analysis is designed to move beyond national averages and explore how equitably health service coverage is distributed across populations within different World Bank income groups.
 
@@ -14,8 +14,7 @@ By incorporating population weights, the methodology reflects the experience of 
 Output plot is placed here. https://github.com/atiqka/Inequality_UHC_IncGroups/blob/main/lorenz%20curve_uhc_by%20income%20groups.png
 
 
-
-## Why This Analysis Matters
+# Why This Analysis Matters
 
 Global averages often conceal large disparities in health service coverage. Two countries may contribute equally to a statistical average despite having vastly different population sizes. As a result, traditional analyses may underestimate or misrepresent inequality experienced by people.
 
@@ -26,13 +25,11 @@ This repository addresses this challenge by:
 - Providing visual and quantitative evidence of equity gaps.
 - Supporting global health, development, and policy research.
 
-The resulting Lorenz curves and Gini coefficients help answer a fundamental question:
-
+The resulting Lorenz curves and Gini coefficients help answer a fundamental question: 
 > How equally are UHC services distributed among populations within different income groups?
 
----
 
-## Objectives
+# Objectives
 
 The script aims to:
 
@@ -43,9 +40,8 @@ The script aims to:
 - Generate publication-ready visualizations.
 - Provide a reproducible framework for equity-focused analyses.
 
----
 
-## Data Requirements
+# Data Requirements
 
 The input dataset should contain the following variables:
 
@@ -61,12 +57,11 @@ The input dataset should contain the following variables:
 The script automatically removes observations with missing values before conducting the analysis.
 
 
-
-## Methodology
+# Methodology
 
 The analytical workflow follows standard inequality measurement approaches commonly used in economics and development studies.
 
-## Step 1: Data Preparation
+# Step 1: Data Preparation
 
 The script imports the dataset and retains the following variables:
 
@@ -77,7 +72,7 @@ The script imports the dataset and retains the following variables:
 
 Observations with missing data are removed.
 
-## Step 2: Income Group Classification
+# Step 2: Income Group Classification
 
 Countries are divided into four World Bank income categories:
 
@@ -86,7 +81,7 @@ Countries are divided into four World Bank income categories:
 3. Lower middle income
 4. Low income
 
-## Step 3: Population-Weighted Lorenz Curves
+# Step 3: Population-Weighted Lorenz Curves
 
 For each income group, the script computes a Lorenz curve using the `ineqpy` package.
 
@@ -95,7 +90,7 @@ The Lorenz curve plots:
 - Cumulative share of population (x-axis)
 - Cumulative share of UHC-SCI coverage (y-axis)
 
-### Step 4: Population-Weighted Gini Coefficients
+# Step 4: Population-Weighted Gini Coefficients
 
 The script calculates a population-weighted Gini coefficient for each income group.
 
@@ -106,7 +101,7 @@ Interpretation:
 
 Higher values indicate larger disparities in UHC service coverage.
 
-## Step 5: Visualization
+# Step 5: Visualization
 
 Results are displayed in a 2×2 faceted figure showing:
 
@@ -116,8 +111,7 @@ Results are displayed in a 2×2 faceted figure showing:
 - Population-weighted Gini coefficients
 
 
-
-## Output
+# Output
 
 The analysis generates a high-resolution PNG figure:
 
@@ -125,7 +119,7 @@ The analysis generates a high-resolution PNG figure:
 lorenz_facets_uhc_ordered.png
 ```
 
-The output contains four panels corresponding to the World Bank income group countries:
+The output contains four panels:
 
 - High income countries
 - Upper middle income countries
@@ -135,16 +129,15 @@ The output contains four panels corresponding to the World Bank income group cou
 Each figure presents both graphical and numerical measures of inequality.
 
 
-
 ## Interpreting the Results
 
-### Lorenz Curve
+# Lorenz Curve
 
 The closer the Lorenz curve lies to the 45-degree line of equality, the more equitable the distribution of UHC service coverage.
 
 A pronounced curve away from the equality line indicates increasing inequality.
 
-### Gini Coefficient
+# Gini Coefficient
 
 The Gini coefficient provides a concise summary measure:
 
@@ -168,9 +161,7 @@ The script is written in Python and uses the following libraries:
 - ineqpy
 
 
-
-
-## Running the Script
+# Running the Script
 
 Update the input and output file locations within the script:
 
@@ -187,28 +178,27 @@ python uhc_lorenz.py
 After successful execution, the figure will be saved to the specified output directory.
 
 
-
 ## Potential Applications
 
 While developed for Universal Health Coverage Service Coverage Index (UHC-SCI), the methodology can be applied broadly to assess equity and distributional outcomes across development sectors.
 
 Examples include:
 
-## Health
+Health
 
 - Health expenditure
 - Vaccination coverage
 - Child mortality indicators
 - Maternal health indicators
 
-## Climate and Environment
+Climate and Environment
 
 - Climate finance allocation
 - Adaptation investments
 - Nature-based solutions financing
 - Disaster risk exposure
 
-## Social Development
+Social Development
 
 - Social protection coverage
 - Educational attainment
@@ -217,7 +207,7 @@ Examples include:
 
 
 
-## Why Population Weighting Matters
+# Why Population Weighting Matters
 
 Many international comparisons treat countries as equal units regardless of population size. This can lead to misleading conclusions about equity.
 
@@ -226,7 +216,7 @@ For example, a country with 2 million people and a country with 200 million peop
 By incorporating population weights, this framework provides a more realistic representation of how services are distributed across populations rather than across countries.
 
 
-## Future Enhancements
+# Future Enhancements
 
 Potential extensions include:
 
@@ -239,13 +229,19 @@ Potential extensions include:
 - Dashboard integration and interactive visualizations
 
 
-## Citation
+# Citation
 
 > Ahmed, A. K.(2026). Population-Weighted Lorenz Curve Analysis of Universal Health Coverage Service Coverage Index (UHC-SCI). GitHub Repository.
 
 
+# License
 
-## License
+MIT License
 
-This project is released under the MIT License.
+Copyright (c) 2026 Atiq Kainan Ahmed.
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
