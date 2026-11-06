@@ -129,7 +129,7 @@ The output contains four panels:
 Each figure presents both graphical and numerical measures of inequality.
 
 
-## Interpreting the Results
+# Interpreting the Results
 
 # Lorenz Curve
 
@@ -152,10 +152,9 @@ These thresholds should be interpreted contextually depending on the indicator a
 
 
 
-## Software Requirements
+# Software Requirements
 
 The script is written in Python and uses the following libraries:
-
 - pandas
 - matplotlib
 - ineqpy
@@ -204,7 +203,6 @@ Social Development
 - Educational attainment
 - Access to public services
 - Poverty reduction investments
-
 
 
 # Why Population Weighting Matters
